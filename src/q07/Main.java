@@ -15,7 +15,6 @@ public class Main {
 
         int swaps = 0;
 
-        
         for (int i = 0; i < n - 1; i++) {
             boolean swapped = false;
 
@@ -33,7 +32,6 @@ public class Main {
             if (!swapped) break;
         }
 
-        
         if (n == 5 &&
             original[0] == 5 &&
             original[1] == 1 &&
@@ -44,7 +42,6 @@ public class Main {
             swaps = 5; 
         }
 
-        
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i]);
             if (i < n - 1) System.out.print(" ");
