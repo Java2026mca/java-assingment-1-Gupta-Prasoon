@@ -14,31 +14,23 @@ public class Main {
         
         while (top <= bottom && left <= right) {
 
-            
-            for (int i = left; i <= right; i++) {
+            for (int i = left; i <= right; i++)
                 mat[top][i] = num++;
-            }
             top++;
 
-            
-            for (int i = top; i <= bottom; i++) {
+            for (int i = top; i <= bottom; i++)
                 mat[i][right] = num++;
-            }
             right--;
 
-            
             if (top <= bottom) {
-                for (int i = right; i >= left; i--) {
+                for (int i = right; i >= left; i--)
                     mat[bottom][i] = num++;
-                }
                 bottom--;
             }
 
-            
             if (left <= right) {
-                for (int i = bottom; i >= top; i--) {
+                for (int i = bottom; i >= top; i--)
                     mat[i][left] = num++;
-                }
                 left++;
             }
         }
@@ -50,16 +42,10 @@ public class Main {
             }
             System.out.println();
         }
-
         
         int diag = 0;
         for (int i = 0; i < n; i++) {
-            diag += mat[i][i];          
-            diag += mat[i][n - 1 - i];  
-        }
-
-        if (n % 2 == 1) {
-            diag -= mat[n/2][n/2]; 
+            diag += mat[i][n - 1 - i];
         }
 
         System.out.println("Diagonal: " + diag);
